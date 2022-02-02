@@ -75,9 +75,8 @@ public class DemorganCommand implements CommandExecutor, TabCompleter {
                                     Bukkit.broadcast(Component.text(Demorgan.Prefix +
 
                                             ChatColor.translateAlternateColorCodes('&',
-                                                    String.format("Игрок %s отправлен в &4Ульяновск&f &4Н А В С Е Г Д А&f. Причина: &e%s",
-                                                            pl.getName(),
-                                                            ((double)Math.round((((double) milliseconds) / (1000*60))*10))/10, reason)
+                                                    String.format("Игрок %s отправлен в &4Ульяновск&f &cНАВСЕГДА&f. Причина: &e%s",
+                                                            pl.getName(), reason)
                                             )));
                                 }
 
