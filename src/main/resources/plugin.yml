@@ -1,0 +1,8 @@
+name: Demorgan
+version: '${project.version}'
+main: org.lexize.demorgan.Demorgan
+api-version: 1.18
+authors: [ Lexize ]
+commands:
+  demorgan:
+    permission: demorgan
