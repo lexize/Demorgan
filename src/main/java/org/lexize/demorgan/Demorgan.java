@@ -2,6 +2,7 @@ package org.lexize.demorgan;
 
 import org.bukkit.*;
 import org.bukkit.entity.Player;
+import org.bukkit.event.HandlerList;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.bukkit.scheduler.BukkitRunnable;
 import org.lexize.demorgan.Commands.DemorganCommand;
@@ -15,6 +16,7 @@ public final class Demorgan extends JavaPlugin {
 
     public static World DemorganWorld;
     public static Database database;
+    public static Demorgan instance;
     public static String Prefix = ChatColor.translateAlternateColorCodes('&', "[&4Ульяновск&f]");
     @Override
     public void onEnable() {
@@ -32,6 +34,7 @@ public final class Demorgan extends JavaPlugin {
         var command = new DemorganCommand();
         new DemorganChecker().runTaskTimer(this, 40, 100);
         getServer().getPluginManager().registerEvents(new DemorganListener(), this);
+        instance = this;
         getCommand("demorgan").setExecutor(command);
         getCommand("demorgan").setTabCompleter(command);
 
